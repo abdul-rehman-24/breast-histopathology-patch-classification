@@ -1,0 +1,11 @@
+# Large / binary artifacts — kept in Drive, not GitHub
+checkpoints/
+embeddings/
+data/
+*.pt
+*.pth
+*.npy
+*.npz
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

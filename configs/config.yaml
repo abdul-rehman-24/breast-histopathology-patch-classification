@@ -1,0 +1,18 @@
+paths:
+  checkpoints: /content/drive/MyDrive/pathology_project/checkpoints
+  data: /content/drive/MyDrive/pathology_project/data
+  drive_root: /content/drive/MyDrive/pathology_project
+  embeddings: /content/drive/MyDrive/pathology_project/embeddings
+  logs: /content/pathology_project/logs
+  repo_root: /content/pathology_project
+  results: /content/pathology_project/results
+  splits: /content/pathology_project/splits
+project_name: breast_cancer_pathology_prototype
+seed: 42
+split_ratios:
+  test: 0.15
+  train: 0.7
+  val: 0.15
+status:
+  day: 1
+  step_completed: step0_project_init
