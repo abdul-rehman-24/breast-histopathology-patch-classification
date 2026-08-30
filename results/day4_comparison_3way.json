@@ -1,0 +1,29 @@
+{
+  "CNN Baseline": {
+    "auroc": 0.9062,
+    "auprc": 0.9238,
+    "f1": 0.8578,
+    "accuracy": 0.8158,
+    "balanced_accuracy": 0.8265,
+    "sensitivity_recall": 0.799,
+    "specificity": 0.8541
+  },
+  "Foundation-Only": {
+    "auroc": 0.9054,
+    "auprc": 0.9326,
+    "f1": 0.9011,
+    "accuracy": 0.8652,
+    "balanced_accuracy": 0.8542,
+    "sensitivity_recall": 0.8825,
+    "specificity": 0.8259
+  },
+  "CNN+Foundation Fusion": {
+    "auroc": 0.9087,
+    "auprc": 0.9269,
+    "f1": 0.9255,
+    "accuracy": 0.8968,
+    "balanced_accuracy": 0.8802,
+    "sensitivity_recall": 0.9227,
+    "specificity": 0.8376
+  }
+}

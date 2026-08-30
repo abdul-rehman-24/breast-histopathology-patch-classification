@@ -1,0 +1,83 @@
+{
+  "experiment_name": "cnn_foundation_fusion",
+  "cnn_model": "EfficientNet-B0 (frozen, Day-2 checkpoint)",
+  "foundation_model": "DINOv2 ViT-S/14 (frozen, Day-3 cache)",
+  "cnn_feature_dim": 1280,
+  "foundation_feature_dim": 384,
+  "projection_dim": 256,
+  "fused_dim": 512,
+  "fusion_method": "concatenation + shallow classifier (Linear-ReLU-Dropout-Linear)",
+  "classifier_trainable_params": 492418,
+  "dataset_split_version": "day1_patient_wise_70_15_15_seed42",
+  "seed": 42,
+  "training_config": {
+    "seed": 42,
+    "epochs": 20,
+    "lr": 0.001,
+    "batch_size": 64,
+    "proj_dim": 256,
+    "optimizer": "AdamW",
+    "loss": "CrossEntropyLoss (weighted)",
+    "cnn_frozen": true,
+    "foundation_frozen": true,
+    "selection_metric": "val_auroc"
+  },
+  "checkpoint_used": "best.pt (epoch 5)",
+  "checkpoint_location": "/content/drive/MyDrive/pathology_project/checkpoints/fusion_model/best.pt (Drive)",
+  "validation_results": {
+    "val_auroc": 0.9380079553400507
+  },
+  "test_results": {
+    "auroc": 0.9086500909642208,
+    "auprc": 0.9269281117100344,
+    "f1": 0.9255429162357808,
+    "precision": 0.9284232365145229,
+    "sensitivity_recall": 0.9226804123711341,
+    "specificity": 0.8376470588235294,
+    "accuracy": 0.896774193548387,
+    "balanced_accuracy": 0.8801637355973317,
+    "confusion_matrix": [
+      [
+        356,
+        69
+      ],
+      [
+        75,
+        895
+      ]
+    ],
+    "n_test_samples": 1395,
+    "checkpoint_epoch": 5,
+    "checkpoint_val_auroc": 0.9380079553400507
+  },
+  "comparison_3way": {
+    "CNN Baseline": {
+      "auroc": 0.9062,
+      "auprc": 0.9238,
+      "f1": 0.8578,
+      "accuracy": 0.8158,
+      "balanced_accuracy": 0.8265,
+      "sensitivity_recall": 0.799,
+      "specificity": 0.8541
+    },
+    "Foundation-Only": {
+      "auroc": 0.9054,
+      "auprc": 0.9326,
+      "f1": 0.9011,
+      "accuracy": 0.8652,
+      "balanced_accuracy": 0.8542,
+      "sensitivity_recall": 0.8825,
+      "specificity": 0.8259
+    },
+    "CNN+Foundation Fusion": {
+      "auroc": 0.9087,
+      "auprc": 0.9269,
+      "f1": 0.9255,
+      "accuracy": 0.8968,
+      "balanced_accuracy": 0.8802,
+      "sensitivity_recall": 0.9227,
+      "specificity": 0.8376
+    }
+  },
+  "notes": "Fusion model overfit heavily after epoch ~5 (train_auroc->1.0). Best selected via val AUROC only. Foundation-only baseline also evaluated (test AUROC=0.9054, F1=0.9011). 3-way comparison: Fusion achieves best AUROC/F1/accuracy/sensitivity but slightly lower specificity than CNN alone. Foundation-only model showed strong validation AUROC (0.9887) but similar overfitting pattern to CNN/Fusion when generalizing to test."
+}

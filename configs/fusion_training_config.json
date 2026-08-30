@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "epochs": 20,
+  "lr": 0.001,
+  "batch_size": 64,
+  "proj_dim": 256,
+  "optimizer": "AdamW",
+  "loss": "CrossEntropyLoss (weighted)",
+  "cnn_frozen": true,
+  "foundation_frozen": true,
+  "selection_metric": "val_auroc"
+}
