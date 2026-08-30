@@ -1,6 +1,8 @@
 paths:
   checkpoints: /content/drive/MyDrive/pathology_project/checkpoints
-  data: /content/drive/MyDrive/pathology_project/data
+  data: /root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4
+  data_note: "Raw dataset NOT stored in Drive \u2014 re-downloaded fresh each session\
+    \ via kagglehub (fast, ~30s, ~4GB)"
   drive_root: /content/drive/MyDrive/pathology_project
   embeddings: /content/drive/MyDrive/pathology_project/embeddings
   logs: /content/pathology_project/logs
