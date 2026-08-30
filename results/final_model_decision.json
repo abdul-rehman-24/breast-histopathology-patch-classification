@@ -1,0 +1,11 @@
+{
+  "recommended_model": "CNN + Foundation Fusion",
+  "reasoning": {
+    "why_fusion": "Fusion achieves the best or near-best AUROC (0.9087), F1 (0.9255), accuracy (0.8968), and sensitivity (0.9227) among all core, directly-comparable (n=1395) experiments. It balances the CNN's local visual detail with the Foundation model's general representation.",
+    "where_cnn_stronger": "CNN has the highest specificity (0.8541) -- fewer false positives on benign cases.",
+    "where_foundation_stronger": "Foundation-only has the highest AUPRC (0.9326), suggesting strong precision-recall behavior, likely from its strong general-purpose pretraining.",
+    "why_ensemble_not_selected": "Validation-based weight search collapsed the ensemble to 100% Foundation-only weight, meaning it provided no combination benefit in this setup -- Fusion remains preferred as it demonstrates genuine complementary benefit from both branches.",
+    "why_attention_grouped_exploratory": "Only 13 test-set patient groups were available, giving high variance and low statistical confidence. Results (perfect sensitivity, high F1) are promising but not conclusive at this sample size."
+  },
+  "overall_conclusion": "Fusion is the recommended V1.0 model: it is the most consistently strong and balanced approach across metrics that are directly comparable at full test-set scale (n=1395)."
+}
