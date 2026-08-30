@@ -1,0 +1,8 @@
+{
+  "issue": "The foundation_only/best.pt checkpoint on Drive was found to have drifted from the originally reported result, likely due to an accidental rerun of training in an earlier session that overwrote the checkpoint file.",
+  "originally_reported_test_auroc": 0.9054,
+  "verification": "The 0.9054 value was independently confirmed twice: once in the original Day-4 run, and again in a Day-5 fresh-recompute audit that matched exactly.",
+  "instability_observed": "Three separate training runs (same seed=42, same data) produced meaningfully different best-checkpoint test AUROC: 0.9054 (original), 0.9116 (later drifted checkpoint), 0.8785 (fresh retrain during Day-7 verification). This indicates the Foundation-only model's best-epoch selection is sensitive to run-to-run variance, likely due to the small validation set (961 samples) combined with rapid overfitting.",
+  "resolution": "The originally reported and twice-verified value (AUROC=0.9054) remains the official result in README and results/foundation_only_metrics.json. The current Drive checkpoint should be treated as unreliable for exact reproduction until retrained deterministically (e.g. with torch.use_deterministic_algorithms(True) and fixed DataLoader worker seeding).",
+  "recommendation_for_future": "Avoid rerunning training cells for already-completed experiments. Consider adding a checkpoint existence check (e.g. raise an error if best.pt already exists and the user hasn't explicitly requested retraining) to prevent accidental overwrites."
+}
