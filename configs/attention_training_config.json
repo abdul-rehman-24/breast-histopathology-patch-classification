@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "epochs": 40,
+  "lr": 0.001,
+  "input_dim": 512,
+  "hidden_dim": 128,
+  "aggregation": "gated attention (Ilse et al. style)",
+  "fusion_frozen": true,
+  "selection_metric": "val_auroc",
+  "n_train_groups": 57
+}

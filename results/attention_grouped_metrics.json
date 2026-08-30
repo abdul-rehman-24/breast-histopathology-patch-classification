@@ -1,0 +1,24 @@
+{
+  "auroc": 0.7777777777777778,
+  "auprc": 0.8412257495590829,
+  "f1": 0.9473684210526315,
+  "precision": 0.9,
+  "sensitivity_recall": 1.0,
+  "specificity": 0.75,
+  "accuracy": 0.9230769230769231,
+  "balanced_accuracy": 0.875,
+  "confusion_matrix": [
+    [
+      3,
+      1
+    ],
+    [
+      0,
+      9
+    ]
+  ],
+  "n_test_groups": 13,
+  "checkpoint_epoch": 2,
+  "checkpoint_val_auroc": 0.9375,
+  "note": "Evaluated at GROUP level (13 test groups), not image level -- not directly comparable in sample size to image-level metrics from Days 2-4."
+}

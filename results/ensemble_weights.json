@@ -1,0 +1,9 @@
+{
+  "w_cnn": 0.0,
+  "w_foundation_only": 1.0,
+  "w_fusion": 0.0,
+  "search_method": "grid search, step=0.1, weights sum to 1",
+  "selection_metric": "validation AUROC",
+  "validation_auroc_achieved": 0.9886859933285188,
+  "seed": 42
+}

@@ -1,0 +1,9 @@
+{
+  "q1_fusion_vs_individual": "Fusion outperforms CNN on all metrics and outperforms Foundation-only on most metrics except AUPRC.",
+  "q2_attention_vs_fusion": "Inconclusive due to very small test group count (n=13). Attention showed perfect sensitivity (1.0) and highest F1, but lower AUROC -- likely a small-sample artifact, not necessarily a genuine capability difference.",
+  "q3_ensemble_vs_individual": "No improvement. Validation-based weight search selected 100% weight on Foundation-only, meaning the ensemble reduces to the Foundation-only model on this validation set.",
+  "q4_best_sensitivity": "Attention/Grouped (1.0), then Fusion (0.9227)",
+  "q5_best_specificity": "CNN Baseline (0.8541)",
+  "q6_auroc_meaningful_change": "Minimal differences among image-level models (0.9054-0.9087). Group-level AUROC drop attributed to small sample size, not necessarily true degradation.",
+  "q7_tradeoffs": "No single universally-best model. Fusion is the most balanced performer; CNN is most specific; Attention/Grouped is most sensitive but statistically unreliable due to n=13; Foundation-only leads on AUPRC. No clinical validation claims are made -- this is a research prototype comparison only."
+}

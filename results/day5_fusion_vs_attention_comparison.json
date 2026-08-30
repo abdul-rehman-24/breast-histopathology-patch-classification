@@ -1,0 +1,20 @@
+{
+  "Fusion (image-level, n=1395)": {
+    "auroc": 0.9087,
+    "auprc": 0.9269,
+    "f1": 0.9255,
+    "accuracy": 0.8968,
+    "balanced_accuracy": 0.8802,
+    "sensitivity_recall": 0.9227,
+    "specificity": 0.8376
+  },
+  "Attention/Grouped (group-level, n=13)": {
+    "auroc": 0.7778,
+    "auprc": 0.8412,
+    "f1": 0.9474,
+    "accuracy": 0.9231,
+    "balanced_accuracy": 0.875,
+    "sensitivity_recall": 1.0,
+    "specificity": 0.75
+  }
+}

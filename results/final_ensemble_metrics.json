@@ -18,5 +18,9 @@
     ]
   ],
   "n_test_samples": 1395,
-  "note": "Recomputed fresh in Day-5 session to fix a stale/inconsistent JSON from a previous session; matches original Day-4 reported values."
+  "weights_used": {
+    "cnn": 0.0,
+    "foundation_only": 1.0,
+    "fusion": 0.0
+  }
 }
