@@ -1,0 +1,23 @@
+{
+  "auroc": 0.9061807155852031,
+  "auprc": 0.923802510515765,
+  "f1": 0.8577753182069728,
+  "precision": 0.9259259259259259,
+  "sensitivity_recall": 0.7989690721649485,
+  "specificity": 0.8541176470588235,
+  "accuracy": 0.8157706093189964,
+  "balanced_accuracy": 0.8265433596118861,
+  "confusion_matrix": [
+    [
+      363,
+      62
+    ],
+    [
+      195,
+      775
+    ]
+  ],
+  "n_test_samples": 1395,
+  "checkpoint_epoch": 1,
+  "checkpoint_val_auroc": 0.950072790215161
+}

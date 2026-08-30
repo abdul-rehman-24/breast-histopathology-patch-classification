@@ -1,0 +1,51 @@
+{
+  "experiment_name": "cnn_baseline_efficientnet_b0",
+  "model": "EfficientNet-B0 (ImageNet pretrained)",
+  "dataset": "BreakHis",
+  "split_version": "day1_patient_wise_70_15_15_seed42",
+  "seed": 42,
+  "training_config": {
+    "seed": 42,
+    "epochs": 10,
+    "lr": 0.0001,
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "loss": "CrossEntropyLoss (weighted)",
+    "scheduler": "ReduceLROnPlateau",
+    "class_weights": [
+      1.5322847366333008,
+      0.7421812415122986
+    ],
+    "selection_metric": "val_auroc"
+  },
+  "checkpoint_used": "best.pt (epoch 1, selected via val_auroc)",
+  "checkpoint_location": "/content/drive/MyDrive/pathology_project/checkpoints/cnn_baseline/best.pt (Google Drive)",
+  "validation_results": {
+    "val_auroc": 0.9501,
+    "epoch": 1
+  },
+  "test_results": {
+    "auroc": 0.9061807155852031,
+    "auprc": 0.923802510515765,
+    "f1": 0.8577753182069728,
+    "precision": 0.9259259259259259,
+    "sensitivity_recall": 0.7989690721649485,
+    "specificity": 0.8541176470588235,
+    "accuracy": 0.8157706093189964,
+    "balanced_accuracy": 0.8265433596118861,
+    "confusion_matrix": [
+      [
+        363,
+        62
+      ],
+      [
+        195,
+        775
+      ]
+    ],
+    "n_test_samples": 1395,
+    "checkpoint_epoch": 1,
+    "checkpoint_val_auroc": 0.950072790215161
+  },
+  "notes": "Model overfit after epoch 1 (train_auroc -> ~1.0 while val_auroc declined). Best checkpoint selected strictly via validation AUROC, not test. Test evaluated once, no tuning performed post-hoc. This is the CNN baseline for comparison with later Foundation-model and fusion experiments."
+}
