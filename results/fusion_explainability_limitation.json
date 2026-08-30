@@ -1,0 +1,5 @@
+{
+  "limitation": "Grad-CAM applies directly to the convolutional CNN pathway (EfficientNet-B0 backbone). The DINOv2 (ViT) pathway is a transformer architecture and does not produce standard convolutional feature maps compatible with Grad-CAM. No transformer-specific interpretability method (e.g. attention rollout) was implemented in this project, as it was outside the documented V1.0 scope. Therefore, visual interpretability shown for the Fusion model reflects only its CNN component, not the Foundation Model component.",
+  "what_is_shown": "Grad-CAM heatmaps from the shared EfficientNet-B0 backbone (same as CNN baseline)",
+  "what_is_not_shown": "No visual interpretability for the DINOv2 embedding contribution to Fusion predictions"
+}

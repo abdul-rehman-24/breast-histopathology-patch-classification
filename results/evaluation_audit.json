@@ -1,0 +1,9 @@
+{
+  "audit_date": "day6_session",
+  "model": "CNN baseline",
+  "fresh_auroc": 0.9061807155852031,
+  "saved_auroc": 0.9061807155852031,
+  "fresh_f1": 0.8577753182069728,
+  "saved_f1": 0.8577753182069728,
+  "match": true
+}

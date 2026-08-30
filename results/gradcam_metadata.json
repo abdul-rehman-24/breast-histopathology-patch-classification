@@ -1,0 +1,74 @@
+[
+  {
+    "filepath": "/root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4/BreaKHis_v1/BreaKHis_v1/histology_slides/breast/benign/SOB/fibroadenoma/SOB_B_F_14-14134/40X/SOB_B_F-14-14134-40-025.png",
+    "category": "correct_benign",
+    "true_label": "benign",
+    "pred_label": "benign",
+    "probability": 0.02023315615952015,
+    "gradcam_file": "gradcam_correct_benign_0.png",
+    "model": "EfficientNet-B0 (Day-2 checkpoint)"
+  },
+  {
+    "filepath": "/root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4/BreaKHis_v1/BreaKHis_v1/histology_slides/breast/benign/SOB/adenosis/SOB_B_A_14-22549AB/200X/SOB_B_A-14-22549AB-200-007.png",
+    "category": "correct_benign",
+    "true_label": "benign",
+    "pred_label": "benign",
+    "probability": 0.23632186651229858,
+    "gradcam_file": "gradcam_correct_benign_1.png",
+    "model": "EfficientNet-B0 (Day-2 checkpoint)"
+  },
+  {
+    "filepath": "/root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4/BreaKHis_v1/BreaKHis_v1/histology_slides/breast/malignant/SOB/ductal_carcinoma/SOB_M_DC_14-15572/100X/SOB_M_DC-14-15572-100-001.png",
+    "category": "correct_malignant",
+    "true_label": "malignant",
+    "pred_label": "malignant",
+    "probability": 0.9879820942878723,
+    "gradcam_file": "gradcam_correct_malignant_2.png",
+    "model": "EfficientNet-B0 (Day-2 checkpoint)"
+  },
+  {
+    "filepath": "/root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4/BreaKHis_v1/BreaKHis_v1/histology_slides/breast/malignant/SOB/ductal_carcinoma/SOB_M_DC_14-20629/200X/SOB_M_DC-14-20629-200-017.png",
+    "category": "correct_malignant",
+    "true_label": "malignant",
+    "pred_label": "malignant",
+    "probability": 0.9971339702606201,
+    "gradcam_file": "gradcam_correct_malignant_3.png",
+    "model": "EfficientNet-B0 (Day-2 checkpoint)"
+  },
+  {
+    "filepath": "/root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4/BreaKHis_v1/BreaKHis_v1/histology_slides/breast/benign/SOB/fibroadenoma/SOB_B_F_14-29960AB/200X/SOB_B_F-14-29960AB-200-007.png",
+    "category": "false_positive",
+    "true_label": "benign",
+    "pred_label": "malignant",
+    "probability": 0.9656084775924683,
+    "gradcam_file": "gradcam_false_positive_4.png",
+    "model": "EfficientNet-B0 (Day-2 checkpoint)"
+  },
+  {
+    "filepath": "/root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4/BreaKHis_v1/BreaKHis_v1/histology_slides/breast/benign/SOB/fibroadenoma/SOB_B_F_14-29960AB/40X/SOB_B_F-14-29960AB-40-007.png",
+    "category": "false_positive",
+    "true_label": "benign",
+    "pred_label": "malignant",
+    "probability": 0.8679127097129822,
+    "gradcam_file": "gradcam_false_positive_5.png",
+    "model": "EfficientNet-B0 (Day-2 checkpoint)"
+  },
+  {
+    "filepath": "/root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4/BreaKHis_v1/BreaKHis_v1/histology_slides/breast/malignant/SOB/ductal_carcinoma/SOB_M_DC_14-14946/400X/SOB_M_DC-14-14946-400-001.png",
+    "category": "false_negative",
+    "true_label": "malignant",
+    "pred_label": "benign",
+    "probability": 0.2149990350008011,
+    "gradcam_file": "gradcam_false_negative_6.png",
+    "model": "EfficientNet-B0 (Day-2 checkpoint)"
+  },
+  {
+    "filepath": "/root/.cache/kagglehub/datasets/ambarish/breakhis/versions/4/BreaKHis_v1/BreaKHis_v1/histology_slides/breast/malignant/SOB/ductal_carcinoma/SOB_M_DC_14-13993/400X/SOB_M_DC-14-13993-400-015.png",
+    "category": "false_negative",
+    "true_label": "malignant",
+    "pred_label": "benign",
+    "probability": 0.44147196412086487,
+    "gradcam_file": "gradcam_false_negative_7.png",
+    "model": "EfficientNet-B0 (Day-2 checkpoint)"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "group_id": "SOB_M_DC_14-14946",
+  "n_images_in_group": 131,
+  "top5_images": [
+    {
+      "file": "SOB_M_DC-14-14946-100-003.png",
+      "weight": 0.09426284581422806
+    },
+    {
+      "file": "SOB_M_DC-14-14946-40-028.png",
+      "weight": 0.09119732677936554
+    },
+    {
+      "file": "SOB_M_DC-14-14946-100-012.png",
+      "weight": 0.0887666791677475
+    },
+    {
+      "file": "SOB_M_DC-14-14946-100-011.png",
+      "weight": 0.05530912056565285
+    },
+    {
+      "file": "SOB_M_DC-14-14946-100-017.png",
+      "weight": 0.04994327947497368
+    }
+  ],
+  "note": "Attention weights indicate relative importance assigned by the model within this group, not confirmed biological/clinical importance. This is patient/group-aware aggregation over BreakHis images, NOT true WSI attention."
+}
