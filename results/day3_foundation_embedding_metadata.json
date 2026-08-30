@@ -1,0 +1,23 @@
+{
+  "foundation_model": "dinov2_vits14",
+  "embedding_dim": 384,
+  "frozen": true,
+  "device_used": "cuda (Tesla T4)",
+  "cache_location": "/content/drive/MyDrive/pathology_project/embeddings/dinov2_vits14",
+  "cache_files": [
+    "train_embeddings.pt",
+    "val_embeddings.pt",
+    "test_embeddings.pt"
+  ],
+  "counts": {
+    "train": 5553,
+    "val": 961,
+    "test": 1395
+  },
+  "integrity_check": {
+    "overall": "PASS",
+    "train": [],
+    "val": [],
+    "test": []
+  }
+}
