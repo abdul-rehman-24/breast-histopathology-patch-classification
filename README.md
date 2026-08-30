@@ -79,3 +79,42 @@ True WSI-level modeling with real slide-level coordinates is a planned Phase 2 e
 
 ## Citation
 BreakHis dataset via Kaggle: https://www.kaggle.com/datasets/ambarish/breakhis
+
+
+## Repository Structure
+```
+configs/           - training configurations (YAML/JSON)
+src/pathology/     - reusable, importable modules
+  data/              - Dataset classes, patient-wise split + leakage check
+  models/            - CNN, Foundation (DINOv2), Fusion, Attention architectures
+  training/          - training loops (image-level, cached-feature, group-level)
+  evaluation/        - shared metric computation + confusion matrix plotting
+  explainability/    - Grad-CAM, attention-weight visualization
+  utils/             - checkpoint save/load/resume, restartable feature caching
+scripts/           - thin CLI entrypoints built on src/pathology/
+  setup_environment.py    - mount Drive, clone repo, download dataset, load splits
+  load_all_checkpoints.py - load all trained models + feature caches
+  evaluate_all.py         - reproduce test-set metrics for CNN/Foundation/Fusion
+notebooks/         - full Colab notebook (Days 1-7, kept for history)
+splits/            - patient-wise train/val/test manifests
+results/           - all metrics, experiment records, comparison tables (JSON/CSV)
+figures/           - confusion matrices, Grad-CAM grid, architecture diagram
+docs/              - reproducibility guide
+requirements.txt   - Python dependencies
+```
+
+### Quick Start (reproduce results without retraining)
+```python
+import sys
+sys.path.insert(0, "src")
+sys.path.insert(0, ".")
+
+from scripts.setup_environment import setup
+from scripts.load_all_checkpoints import load_everything
+from scripts.evaluate_all import evaluate_all_models
+
+ctx = setup()
+everything = load_everything(ctx)
+results = evaluate_all_models(everything)
+```
+Note: checkpoints and feature caches are stored on Google Drive (not GitHub) due to file size.
