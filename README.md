@@ -49,6 +49,20 @@ See figures/final_architecture_diagram.png
 
 Recommended model: CNN + Foundation Fusion — most balanced/consistent performer.
 
+**Note on Weighted Ensemble:** The validation-based weight search selected 100% weight
+for the Foundation-only model (w_CNN = 0, w_Foundation = 1.0, w_Fusion = 0). Therefore,
+the Weighted Ensemble result is numerically identical to the Foundation-only result in
+this experiment; the ensemble did not provide an improvement.
+
+**Note on Foundation-Only reproducibility:** The Foundation-Only result (AUROC 0.9054)
+was obtained and independently confirmed twice during development. During a later
+reproducibility audit, the saved checkpoint was found to produce a different result,
+indicating checkpoint/run drift. Additional retraining attempts also produced varying
+results. We therefore retain the original twice-verified result for historical reporting
+and explicitly flag it as not currently re-derivable from the live checkpoint. The issue
+is documented in results/foundation_only_stability_note.json. This does not affect the
+independently reproduced CNN and Fusion results.
+
 ## Explainability
 - Grad-CAM applied to EfficientNet-B0 backbone on 8 representative test images
 - Grad-CAM explains the CNN pathway only; DINOv2 branch not directly compatible (documented limitation)

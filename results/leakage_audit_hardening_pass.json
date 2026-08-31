@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "train_val_overlap": 0,
+  "train_test_overlap": 0,
+  "val_test_overlap": 0,
+  "duplicate_paths": 0,
+  "timestamp": "2026-08-31T02:11:45.697492Z",
+  "audit_context": "Post-Day-8 hardening pass \u2014 re-checked on Kaggle against current splits/*.csv",
+  "train_count": 5553,
+  "val_count": 961,
+  "test_count": 1395,
+  "train_patients": 57,
+  "val_patients": 12,
+  "test_patients": 13
+}
