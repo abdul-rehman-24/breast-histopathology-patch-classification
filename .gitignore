@@ -1,7 +1,7 @@
 # Large / binary artifacts — kept in Drive, not GitHub
 checkpoints/
 embeddings/
-data/
+/data/
 *.pt
 *.pth
 *.npy
