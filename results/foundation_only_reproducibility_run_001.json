@@ -1,0 +1,46 @@
+{
+  "run_name": "reproducibility_run_001",
+  "purpose": "Deterministic re-run of Foundation-only training as part of V1.0 hardening pass, to test whether full seeding (random/numpy/torch/cuda + seeded DataLoader + cudnn.deterministic + torch.use_deterministic_algorithms(True)) resolves the run-to-run variance documented in foundation_only_stability_note.json.",
+  "environment": "Kaggle (Tesla T4), fresh DINOv2 embedding extraction (not reused from Drive cache)",
+  "config": {
+    "seed": 42,
+    "epochs": 20,
+    "lr": 0.001,
+    "batch_size": 64,
+    "proj_dim": 256,
+    "optimizer": "AdamW",
+    "scheduler": "ReduceLROnPlateau(patience=3, factor=0.5)",
+    "loss": "CrossEntropyLoss (weighted)",
+    "deterministic_algorithms": true,
+    "cudnn_deterministic": true,
+    "environment": "Kaggle (T4 GPU)",
+    "dataset_split_version": "day1_patient_wise_70_15_15_seed42"
+  },
+  "checkpoint_epoch": 6,
+  "validation_auroc": 0.9859921822162614,
+  "test_metrics": {
+    "auroc": 0.9167677380230442,
+    "auprc": 0.9462495040845379,
+    "f1": 0.9252243270189432,
+    "precision": 0.8957528957528957,
+    "sensitivity_recall": 0.9567010309278351,
+    "specificity": 0.7458823529411764,
+    "accuracy": 0.8924731182795699,
+    "balanced_accuracy": 0.8512916919345057,
+    "confusion_matrix": [
+      [
+        317,
+        108
+      ],
+      [
+        42,
+        928
+      ]
+    ],
+    "n_samples": 1395
+  },
+  "git_commit": "e16386ba2fe8d03f2b235e20f27127ebeb51aa1a",
+  "timestamp": "2026-09-01T02:14:20.735328+00:00",
+  "finding": "Even with full determinism enabled, this run produced test AUROC=0.9168, DIFFERENT from the original historical value (0.9054) and from two earlier non-deterministic reruns (0.9116, 0.8785). This indicates the instability is not solely explained by missing seeding -- the small validation set (961 samples) appears to make best-epoch selection genuinely sensitive to minor environmental differences (e.g. Colab vs Kaggle library versions, hardware). This result is reported as-is, without cherry-picking.",
+  "relationship_to_historical_result": "This does NOT replace the historical reported value (0.9054). Both are preserved. See results/foundation_only_metrics.json for the original, and results/foundation_only_stability_note.json for the full instability history."
+}
